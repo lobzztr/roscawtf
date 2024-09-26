@@ -85,7 +85,7 @@ import { NextResponse } from 'next/server'
 const mockData = {
     user: {
       id: 2,
-      name: "anjal",
+      name: "user",
       balance: 0,
       points: 420
     },
