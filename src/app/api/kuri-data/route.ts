@@ -99,7 +99,7 @@ const mockData = {
           participants: [
             {
               name: "julu",
-              statuses: ["RECEIVED", "PENDING", "PENDING", "PENDING", "PENDING", "PENDING"]
+              statuses: ["COMPLETED", "PENDING", "PENDING", "PENDING", "PENDING", "PENDING"]
             },
             {
               name: "hashif",

@@ -18,7 +18,7 @@ const customTheme = darkTheme({
 });
 
 async function getData() {
-  const res = await fetch('https://rosca-core-v1.onrender.com/user_profile_data?address=0x06A758c2Bd61E12494E57803a3ddFE9D4d95779a', { cache: 'no-store' });
+  const res = await fetch('https://roscawtf.vercel.app/api/kuri-data', { cache: 'no-store' });
   
   if (!res.ok) {
     throw new Error('Failed to fetch data');
