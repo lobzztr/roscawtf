@@ -14,7 +14,7 @@ export function Rotate(){
         contract : contract,
         method : "currentRound"
     });
-    const currentRoundStr = currentRound ? currentRound.toString() : BigInt(0);
+    // const currentRoundStr = currentRound ? currentRound.toString() : BigInt(0);
 
     const { data : hasPaidRound} = useReadContract({
         contract : contract,

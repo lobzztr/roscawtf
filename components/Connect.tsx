@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { chain } from "@/src/app/chain";
 import { client } from "@/src/app/client";
 import { ConnectButton } from "@/src/app/thirdweb";
-import { lightTheme, darkTheme } from 'thirdweb/react';
+import { darkTheme } from 'thirdweb/react';
 import { contract } from "@/utils/contract";
 import { useActiveAccount, useReadContract } from "thirdweb/react";
 

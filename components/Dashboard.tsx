@@ -3,10 +3,10 @@
 import { useState } from 'react'
 import { X ,CheckIcon, AlertTriangleIcon, ChevronDownIcon, ChevronRightIcon, TrophyIcon, WalletIcon, Minus, LoaderPinwheel } from "lucide-react"
 import { Loop } from './Loop';
-import { ConnectButton } from '@/src/app/thirdweb';
-import { client } from '@/src/app/client';
-import { chain } from '@/src/app/chain';
-import { Enrol } from './Enrol';
+// import { ConnectButton } from '@/src/app/thirdweb';
+// import { client } from '@/src/app/client';
+// import { chain } from '@/src/app/chain';
+// import { Enrol } from './Enrol';
 import { useActiveWallet, useDisconnect } from 'thirdweb/react';
 
 interface ApiResponse {

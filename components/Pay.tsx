@@ -1,10 +1,10 @@
 'use client'
 
 import { contract } from "@/utils/contract";
-import { useState } from "react"
+// import { useState } from "react"
 import { prepareContractCall, toEther } from "thirdweb";
-import { TransactionButton, useActiveAccount, useReadContract,  } from "thirdweb/react"
-import { lightTheme, darkTheme } from 'thirdweb/react';
+import { TransactionButton, useReadContract,  } from "thirdweb/react"
+import { darkTheme } from 'thirdweb/react';
 
 
 export function Pay(){
@@ -16,8 +16,8 @@ export function Pay(){
         },
       });
 
-    const account = useActiveAccount();
-    const wallet = account ? account.address : ""
+    // const account = useActiveAccount();
+    // const wallet = account ? account.address : ""
 
     const { data : currentRound } = useReadContract({
         contract : contract,

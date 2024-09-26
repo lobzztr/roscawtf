@@ -2,13 +2,13 @@
 
 import { contract } from "@/utils/contract";
 import { toEther } from "thirdweb";
-import { useActiveAccount, useReadContract } from "thirdweb/react"
+import { useReadContract } from "thirdweb/react"
 import { Rotate } from "./Rotate";
 
 export function Loop(){
 
-    const account = useActiveAccount();
-    const wallet = account ? account.address : ""
+    // const account = useActiveAccount();
+    // const wallet = account ? account.address : ""
 
     const { data : slots } = useReadContract({
         contract : contract,
@@ -49,11 +49,11 @@ export function Loop(){
     const bid = winningBidforRound ? (winningBidforRound).toString() : "0"
 
 
-    const { data : hasPaidRound} = useReadContract({
-        contract : contract,
-        method : "hasPaidRound",
-        params : [wallet, currentRound ? currentRound : BigInt(0)]
-    })
+    // const { data : hasPaidRound} = useReadContract({
+    //     contract : contract,
+    //     method : "hasPaidRound",
+    //     params : [wallet, currentRound ? currentRound : BigInt(0)]
+    // })
 
 
     function truncate(value: string | number, decimalPlaces: number): number {
