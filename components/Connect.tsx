@@ -94,7 +94,7 @@ export default function Connect() {
             <p className="text-red-500">have access rn</p>
             <p className="text-gray-400">--</p>
             <p className="text-gray-500">
-              dm <a className='font-bold text-white' href="https://x.com/Lobzztr" target="_blank" rel="noopener noreferrer">lobzztr</a> your 🔑 to sign up!
+              dm <a className='font-bold text-white' href="https://x.com/Lobzztr" target="_blank" rel="noopener noreferrer">🦞</a> your 🔑 to sign up!
             </p>
           </div>
         </div>
