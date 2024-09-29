@@ -172,7 +172,7 @@ export function Dashboard({ initialData }: { initialData: ApiResponse }) {
   //   </div>
   // )
 
-  const renderKuriSection = (kuri: KuriData) => {
+  const RenderKuriSection = (kuri: KuriData) => {
     const [expandedLoops, setExpandedLoops] = useState<{ [key: number]: boolean }>({});
   
     const toggleLoop = (id: number) => {
@@ -264,7 +264,7 @@ export function Dashboard({ initialData }: { initialData: ApiResponse }) {
         </div>
       </div>
       
-      {data.kuris.map(renderKuriSection)}
+      {data.kuris.map(RenderKuriSection)}
     </div>
   )
 }
