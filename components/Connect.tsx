@@ -71,34 +71,35 @@ export default function Connect() {
         </div>
       </div>
     );
-  }
-
-  return (
-    <div>
-      {isAllowed && isParticipant ? (
-        <Dashboard initialData={data}/>
-      ) : isAllowed && !isParticipant ? (
-        <Dashboard initialData={data}/>
-      ) : (
-        <div className="min-w-[400px] min-h-[800px] font-mono text-sm mx-auto bg-black text-white flex flex-col justify-center items-center">
-          <div className="h-full w-full flex flex-col justify-center items-center space-y-6">
-            <h1 className="text-2xl">rosca</h1>
-            <p className="text-base text-gray-400">rotating savings & credit protocol</p>
-            <div>
-              <ConnectButton client={client} chain={chain} />
+  } else {
+    return (
+      <div>
+        {isAllowed && isParticipant ? (
+          <Dashboard initialData={data}/>
+        ) : isAllowed && !isParticipant ? (
+          <Dashboard initialData={data}/>
+        ) : (
+          <div className="min-w-[400px] min-h-[800px] font-mono text-sm mx-auto bg-black text-white flex flex-col justify-center items-center">
+            <div className="h-full w-full flex flex-col justify-center items-center space-y-6">
+              <h1 className="text-2xl">rosca</h1>
+              <p className="text-base text-gray-400">rotating savings & credit protocol</p>
+              <div>
+                <ConnectButton client={client} chain={chain} />
+              </div>
+              <p className="text-basic text-green-400">save your 🔑 :</p>
+              <p className="text-xs text-green-500 font-bold">{wallet}</p>
+              <p className="text-gray-400">--</p>
+              <p className="text-red-500">connected account does not </p>
+              <p className="text-red-500">have access rn</p>
+              <p className="text-gray-400">--</p>
+              <p className="text-gray-500">
+                dm <a className='font-bold text-white' href="https://x.com/Lobzztr" target="_blank" rel="noopener noreferrer">🦞</a> your 🔑 to sign up!
+              </p>
             </div>
-            <p className="text-basic text-green-400">save your 🔑 :</p>
-            <p className="text-xs text-green-500 font-bold">{wallet}</p>
-            <p className="text-gray-400">--</p>
-            <p className="text-red-500">connected account does not </p>
-            <p className="text-red-500">have access rn</p>
-            <p className="text-gray-400">--</p>
-            <p className="text-gray-500">
-              dm <a className='font-bold text-white' href="https://x.com/Lobzztr" target="_blank" rel="noopener noreferrer">🦞</a> your 🔑 to sign up!
-            </p>
           </div>
-        </div>
-      )}
-    </div>
-  );
+        )}
+      </div>
+    );
+  
+  } 
 }
