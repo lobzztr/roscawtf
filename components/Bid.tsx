@@ -53,7 +53,7 @@ export function Bid(){
 
     return(
         <div className="w-full flex flex-col items-center space-y-6 mb-6">
-            <span className="font-bold text-gray-500 text-lg mt-6 px-2">bid module</span>
+            <span className="font-bold text-gray-500 text-lg mt-6 px-2">-------</span>
             <div className="space-y-2 flex flex-col items-center mb-2">
               <p className="space-y-2 text-sm font-bold text-blue-500">winning : {highBidderName === yourname ? "you" : highBidderName }</p>
               <p className="space-y-2 text-sm font-bold text-red-500">your bid : {yourBidStr}%</p>
@@ -86,7 +86,7 @@ export function Bid(){
                         }}
                         onTransactionConfirmed={() => alert("Success!!")}
                     >
-                    bid
+                    🙋‍♀️ bid
                     </TransactionButton>
                 </div>
                 

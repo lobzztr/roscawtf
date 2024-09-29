@@ -4,6 +4,7 @@ import { contract } from "@/utils/contract";
 import { toEther } from "thirdweb";
 import { useReadContract } from "thirdweb/react"
 import { Rotate } from "./Rotate";
+import { Winner } from "./Winner";
 
 export function Loop(){
 
@@ -71,12 +72,12 @@ export function Loop(){
             <span className="text-red-500 my-1 text-base text-gray-500 font-bold">⭕️ round {currentRoundStr}/{slotsStr} </span>
             <span className="text-red-500 my-1">⏳  4.20PM 20 April 2024 </span>            
             <div className="w-full h-full flex justify-center mt-3 font-bold">
-                <span className="text-blue-500 my-1 mx-3">💰</span>
-                <span className="text-blue-500 my-1"> {truncate(total, 3)} IN₹</span>
+                <span className="text-lg text-blue-500 my-1 mx-3">💰</span>
+                <span className="text-lg text-blue-500 my-1"> {truncate(total, 3)} IN₹</span>
             </div>
             <div className="w-full h-full flex justify-center font-bold">
-                <span className="text-blue-500 my-1 mx-3">🙋‍♀️</span>
-                <span className="text-red-500 my-1"> {bid} %</span>
+                <span className="text-lg text-blue-500 my-1 mx-3">🙋‍♀️</span>
+                <span className="text-lg text-red-500 my-1"> {bid} %</span>
             </div>
 
             {currentRoundStr === "0" ? (
@@ -86,7 +87,7 @@ export function Loop(){
             ) : deadline && Date.now() < Number(deadline) * 1000 ? (
                 <Rotate/> 
             ) : (
-                <div>winner</div>
+                <Winner/>
             )
             }
 

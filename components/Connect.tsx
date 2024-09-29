@@ -18,7 +18,7 @@ const customTheme = darkTheme({
 });
 
 async function getData() {
-  const res = await fetch('https://roscawtf.vercel.app/api/kuri-data', { cache: 'no-store' });
+  const res = await fetch('http://localhost:3000/api/kuri-data', { cache: 'no-store' });
   
   if (!res.ok) {
     throw new Error('Failed to fetch data');
@@ -61,8 +61,8 @@ export default function Connect() {
 
   if (account === undefined || data === null) {
     return (
-      <div className="min-w-[360px] min-h-[720px] font-mono text-sm border-2 border-white p-6 mx-auto bg-black text-white mt-10 mb-10 flex flex-col justify-center items-center">
-        <div className="h-full flex flex-col justify-center items-center space-y-6">
+      <div className="min-w-[400px] min-h-[800px] font-mono text-sm bg-black text-white flex flex-col justify-center items-center">
+        <div className="h-full w-full flex flex-col justify-center items-center space-y-6">
           <h1 className="text-2xl">rosca</h1>
           <p className="text-base text-gray-400">rotating savings & credit protocol</p>
           <div>
@@ -80,18 +80,21 @@ export default function Connect() {
       ) : isAllowed && !isParticipant ? (
         <Dashboard initialData={data}/>
       ) : (
-        <div className="min-w-[360px] min-h-[720px] font-mono text-sm border-2 border-grey p-6 mx-auto bg-black text-white mt-10 mb-10 flex flex-col justify-center items-center">
-          <div className="h-full flex flex-col justify-center items-center space-y-6">
+        <div className="min-w-[400px] min-h-[800px] font-mono text-sm mx-auto bg-black text-white flex flex-col justify-center items-center">
+          <div className="h-full w-full flex flex-col justify-center items-center space-y-6">
             <h1 className="text-2xl">rosca</h1>
             <p className="text-base text-gray-400">rotating savings & credit protocol</p>
             <div>
               <ConnectButton client={client} chain={chain} />
             </div>
-            <p className="text-red-500">connected wallet does not </p>
-            <p className="text-red-500">have an active membership rn</p>
+            <p className="text-basic text-green-400">save your 🔑 :</p>
+            <p className="text-xs text-green-500 font-bold">{wallet}</p>
+            <p className="text-gray-400">--</p>
+            <p className="text-red-500">connected account does not </p>
+            <p className="text-red-500">have access rn</p>
             <p className="text-gray-400">--</p>
             <p className="text-gray-500">
-              dm <a className='font-bold text-white' href="https://x.com/Lobzztr" target="_blank" rel="noopener noreferrer">lobzztr</a> to sign up!
+              dm <a className='font-bold text-white' href="https://x.com/Lobzztr" target="_blank" rel="noopener noreferrer">lobzztr</a> your 🔑 to sign up!
             </p>
           </div>
         </div>

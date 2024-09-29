@@ -84,15 +84,15 @@ import { NextResponse } from 'next/server'
 
 const mockData = {
     user: {
-      id: 2,
-      name: "user",
+      id: 0,
+      name: "",
       balance: 0,
       points: 420
     },
     kuris: [
       {
         id: 0,
-        contribution: 1000,
+        contribution: 0,
         prize: 0,
         truthTable: {
           periods: 6,
@@ -107,7 +107,7 @@ const mockData = {
             },
             {
               name: "anjal",
-              statuses: ["COMPLETED", "PENDING", "PENDING", "PENDING", "PENDING", "PENDING"]
+              statuses: ["", "PENDING", "PENDING", "PENDING", "PENDING", "PENDING"]
             },
             {
               name: "nihal",
@@ -115,7 +115,7 @@ const mockData = {
             },
             {
               name: "john",
-              statuses: ["RECEIVED", "PENDING", "PENDING", "PENDING", "PENDING", "PENDING"]
+              statuses: ["COMPLETED", "PENDING", "PENDING", "PENDING", "PENDING", "PENDING"]
             },
             {
               name: "amal",
