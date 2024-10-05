@@ -44,7 +44,7 @@ export function Pay(){
         <div className="w-full flex flex-col items-center space-y-6 mb-6">
             <span className="font-bold text-gray-500 text-lg mt-6 px-2">-------</span>
             <div className="space-y-2 flex flex-col items-center mb-2">
-              <p className="space-y-2 text-sm font-bold text-blue-500">discount : {dividend} IN₹</p>
+              <p className="space-y-2 text-sm font-bold text-green-500">discount : {dividend} IN₹</p>
               <p className="space-y-2 text-sm font-bold text-red-500">due : {due} IN₹</p>
             </div>
 

@@ -24,6 +24,7 @@ export function Bid(){
         method : "currentRound"
     });
 
+
     const { data : highestBidder } = useReadContract({
         contract : contract,
         method : "winnerWinner"
@@ -55,7 +56,15 @@ export function Bid(){
         <div className="w-full flex flex-col items-center space-y-6 mb-6">
             <span className="font-bold text-gray-500 text-lg mt-6 px-2">-------</span>
             <div className="space-y-2 flex flex-col items-center mb-2">
-              <p className="space-y-2 text-sm font-bold text-blue-500">winning : {highBidderName === yourname ? "you" : highBidderName }</p>
+              <p className="space-y-2 text-sm font-bold text-green-500">
+                winning : {highBidderName === yourname ? (
+                    "you"
+                ) :  highBidderName === "admin" ? (
+                    "raffle"
+                ) : (
+                    highBidderName
+                ) }
+              </p>
               <p className="space-y-2 text-sm font-bold text-red-500">your bid : {yourBidStr}%</p>
             </div>
 
@@ -70,10 +79,6 @@ export function Bid(){
                 onChange={(e) => setBidPercentage(Number(e.target.value))}
                 className="w-full bg-red-500"
                 />
-                {/* <button 
-                    className="w-full bg-black text-white border-4 border-white rounded hover:bg-yellow-500 hover:text-blue-500 text-lg font-bold mb-3 py-2"
-                    
-                >bid</button> */}
                 <div className="w-full flex flex-col items-center">
                     <TransactionButton
                         theme={customTheme}
@@ -88,8 +93,7 @@ export function Bid(){
                     >
                     🙋‍♀️ bid
                     </TransactionButton>
-                </div>
-                
+                </div>                
             </div>
         </div>
     )

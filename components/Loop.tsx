@@ -8,8 +8,6 @@ import { Winner } from "./Winner";
 
 export function Loop(){
 
-    // const account = useActiveAccount();
-    // const wallet = account ? account.address : ""
 
     const { data : slots } = useReadContract({
         contract : contract,
@@ -50,13 +48,6 @@ export function Loop(){
     const bid = winningBidforRound ? (winningBidforRound).toString() : "0"
 
 
-    // const { data : hasPaidRound} = useReadContract({
-    //     contract : contract,
-    //     method : "hasPaidRound",
-    //     params : [wallet, currentRound ? currentRound : BigInt(0)]
-    // })
-
-
     function truncate(value: string | number, decimalPlaces: number): number {
         const numericValue: number = Number(value);
         if (isNaN(numericValue)) {
@@ -73,7 +64,7 @@ export function Loop(){
             <span className="text-red-500 my-1">⏳  4.20PM 20 April 2024 </span>            
             <div className="w-full h-full flex justify-center mt-3 font-bold">
                 <span className="text-lg text-blue-500 my-1 mx-3">💰</span>
-                <span className="text-lg text-blue-500 my-1"> {truncate(total, 3)} IN₹</span>
+                <span className="text-lg text-blue-500 my-1"> {truncate(total, 2)} IN₹</span>
             </div>
             <div className="w-full h-full flex justify-center font-bold">
                 <span className="text-lg text-blue-500 my-1 mx-3">🙋‍♀️</span>
