@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { chain } from "@/src/app/chain";
 import { client } from "@/src/app/client";
 import { ConnectButton } from "@/src/app/thirdweb";
@@ -22,7 +22,7 @@ export default function Connect() {
   const account = useActiveAccount();
   const wallet = account ? account.address.toString() : "";
 
-  async function getData() {
+  const getData = useCallback(async () => {
     const res = await fetch(`https://rosca-backend-z62i.onrender.com/api/mvp/${wallet}`, { cache: 'no-store' });
     
     if (!res.ok) {
@@ -30,8 +30,7 @@ export default function Connect() {
     }
   
     return res.json();
-  }
-
+  }, [wallet]);  
 
 
   const { data: isAllowed } = useReadContract({
@@ -57,10 +56,11 @@ export default function Connect() {
         }
       }
     }
-
+  
     fetchData();
-  }, [wallet]);
+  }, [wallet, getData]);
 
+  
   if (data === null) {
     return (
       <div className="min-w-[400px] min-h-[800px] font-mono text-sm bg-black text-white flex flex-col justify-center items-center">
