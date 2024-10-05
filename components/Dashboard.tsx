@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { XIcon ,CheckIcon, AlertTriangleIcon, ChevronDownIcon, ChevronRightIcon, TrophyIcon, WalletIcon, Minus, DollarSignIcon, LoaderPinwheelIcon, BadgeDollarSignIcon } from "lucide-react"
+import { XIcon ,CheckIcon, AlertTriangleIcon, ChevronDownIcon, ChevronRightIcon, TrophyIcon, WalletIcon, Minus, DollarSignIcon, LoaderPinwheelIcon } from "lucide-react"
 import { Loop } from './Loop';
 // import { ConnectButton } from '@/src/app/thirdweb';
 // import { client } from '@/src/app/client';
