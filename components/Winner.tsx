@@ -86,7 +86,7 @@ export function Winner(){
                                 transaction={async () => {
                                     return prepareContractCall({
                                         contract: contract,
-                                        method: "contribute",
+                                        method: "cashout",
                                     });
                                 }}
                                 onTransactionConfirmed={() => alert("Success!!")}
