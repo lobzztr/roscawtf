@@ -35,7 +35,7 @@ export function Pay(){
     const { data : dividendBig } = useReadContract({
         contract : contract,
         method : "discountOfferedforRound",
-        params : [currentRound ? currentRound : BigInt(0)]
+        params : [currentRound ? currentRound - BigInt(1) : BigInt(0)]
     });
     const dividend = dividendBig ? toEther(dividendBig).toString() : toEther(BigInt(0));
 
