@@ -4,7 +4,7 @@ import { getContract } from "thirdweb";
 import { contractABI } from "./contractABI";
 import { fiatContractABI } from "./fiatContractABI";
 
-const contractAddress = "0x627D0A5ff92c05EB1Ba450887E835A6020E26e69";
+const contractAddress = "0x9E19E85b4CD4f693Cd511E1D61801a503e0FDb41";
 
 export const contract = getContract({
     client : client,
