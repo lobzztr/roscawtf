@@ -13,7 +13,7 @@ export const contract = getContract({
     abi : contractABI
 });
 
-const erc20FiatContractAddress = "0x42F253D3E3Ee7Dd8676DE6075c15A252879FA9cF";
+const erc20FiatContractAddress = "0xA755f72E3106C7e59D269A2FB0Bacb5a5373fC6A";
 
 export const erc20Contract = getContract({
     client : client,
